@@ -14,10 +14,22 @@
 13) docker logs container-name // shoes current logs
 14) curl http://localhost:8080 //hit localhost url from cmd
 15) docker exec -it container-name sh // execute into the terminal inside running container interactive terminal
-16) 
+16) docker build -t tag-name .   // to build docker image from docker file run this command from same folder location where Dockerfile is present  DOT is important don't miss it
 
 
 Container lifecycle stages
 1) Container Running
 2) Container Stopped
 3) Container Removed
+
+# Doker File syntax
+1) FROM base-image
+2) INSTRUCTION1 args1 args2
+3) INSTRUCTION2 args1
+4) INSTRUCTION args1 args2......
+5) CBM [.....]
+
+# Example 
+1) FROM nginx:1.27.0
+2) apt-get-get update
+3) apt-get -y install vim
