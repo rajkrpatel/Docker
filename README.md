@@ -18,7 +18,8 @@
 17) docker build -t tag-name .   // to build docker image from docker file run this command from same folder location where Dockerfile is present  DOT is important don't miss it. DOT stand for current build directly from use cmd is executed
 18) docker push mailrajkrpatel/first-app:1.0.0 // push the changes to docker registry
 19) docker rmi images-id //remove image
-20) 
+20) docker rm $(docker ps -aq) //remove all the non running containers
+21) docker rmi -f $(docker images -aq) // force delete all the images
 
 
 Container lifecycle stages
