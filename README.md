@@ -15,8 +15,10 @@
 14) curl http://localhost:8080 //hit localhost url from cmd
 15) docker exec -it container-name sh // execute into the terminal inside running container interactive terminal sh stand for shell command
 16) example docker exec -it first-app sh
-17) docker build -t tag-name .   // to build docker image from docker file run this command from same folder location where Dockerfile is present  DOT is important don't miss it
+17) docker build -t tag-name .   // to build docker image from docker file run this command from same folder location where Dockerfile is present  DOT is important don't miss it. DOT stand for current build directly from use cmd is executed
 18) docker push mailrajkrpatel/first-app:1.0.0 // push the changes to docker registry
+19) docker rmi images-id //remove image
+20) 
 
 
 Container lifecycle stages
