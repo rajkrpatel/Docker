@@ -31,5 +31,7 @@ Container lifecycle stages
 
 # Example 
 1) FROM nginx:1.27.0
-2) apt-get-get update
-3) apt-get -y install vim
+
+2) RUN apt-get update
+3) RUN apt-get -y install vim
+
