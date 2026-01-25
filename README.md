@@ -22,6 +22,7 @@
 21) docker rmi -f $(docker images -aq) // force delete all the images
 22) docker pause container-name // pause a running container so in memory data will not lost
 23) docker unpause container-name // unpause a paused a container
+24) docker kill container-name
 
 
 Container lifecycle stages
