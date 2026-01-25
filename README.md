@@ -23,6 +23,10 @@
 22) docker pause container-name // pause a running container so in memory data will not lost
 23) docker unpause container-name // unpause a paused a container
 24) docker kill container-name
+25) docker history image-name // shows layered history of images
+26) docker run --rm -it image-id sh // view image directoy
+27) docker run -e PORT=5001 // set environment variable which running the docker
+28) docker run -e PORT=5001 -e APP_NAME = "Test APP name" // setting multiple environment from CLI
 
 
 Container lifecycle stages
@@ -36,6 +40,10 @@ Container lifecycle stages
 3) INSTRUCTION2 args1
 4) INSTRUCTION args1 args2......
 5) CBM [.....]
+6) ENV environment-variable name
+7) RUN cmd // npm ci
+8) ENTRYPOINT
+9) 
 
 # Example 
 1) FROM nginx:1.27.0
