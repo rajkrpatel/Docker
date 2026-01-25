@@ -20,6 +20,8 @@
 19) docker rmi images-id //remove image
 20) docker rm $(docker ps -aq) //remove all the non running containers
 21) docker rmi -f $(docker images -aq) // force delete all the images
+22) docker pause container-name // pause a running container so in memory data will not lost
+23) docker unpause container-name // unpause a paused a container
 
 
 Container lifecycle stages
