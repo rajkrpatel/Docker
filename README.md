@@ -27,6 +27,7 @@
 26) docker run --rm -it image-id sh // view image directoy
 27) docker run -e PORT=5001 // set environment variable which running the docker
 28) docker run -e PORT=5001 -e APP_NAME = "Test APP name" // setting multiple environment from CLI
+29) docker run -f custom-docker-file-name . // use this command to build an image if dockerfile name is different then Dockerfile
 
 
 Container lifecycle stages
