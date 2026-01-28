@@ -34,7 +34,7 @@
 33) docker volumne ls
 34) docker volume inspect volume-name
 35) docker volume rm volume-name
-36) 
+36) docker volume ls -f dangling=true // find unused dangling volume mean volume which are not used by any containers
 
 
 Container lifecycle stages
