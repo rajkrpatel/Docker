@@ -27,7 +27,14 @@
 26) docker run --rm -it image-id sh // view image directoy
 27) docker run -e PORT=5001 // set environment variable which running the docker
 28) docker run -e PORT=5001 -e APP_NAME = "Test APP name" // setting multiple environment from CLI
-29) docker run -f custom-docker-file-name . // use this command to build an image if dockerfile name is different then Dockerfile
+29) docker run -f custom-docker-file-name . // use this command to build an image if dockerfile name is different then Dockerfile'
+30) docker volume create volume-name // create a named volume
+31) docker run -d -p 8080:80 --name website-main -v volume-name:/path/to/container/data/ image-name // map named volume to data
+32) docker run -d -p 8080:80 --name website-maim -v  ./localhostpath:/app/path image-name // using bind mount
+33) docker volumne ls
+34) docker volume inspect volume-name
+35) docker volume rm volume-name
+36) 
 
 
 Container lifecycle stages
