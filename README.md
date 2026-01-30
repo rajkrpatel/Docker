@@ -34,7 +34,11 @@
 33) docker volumne ls
 34) docker volume inspect volume-name
 35) docker volume rm volume-name
-36) docker volume ls -f dangling=true // find unused dangling volume mean volume which are not used by any containers
+36) docker volume ls -f dangling=true // find unused dangling volume mean volume which are not used by any containers7
+37) docker inspect container-name
+38) docker run container-name --restart on-failure
+39) docker run container-name --restart on-failure:3 // 3 is limit number, it will try 3 restart
+40) docker network ls // shows all the network driver
 
 
 Container lifecycle stages
