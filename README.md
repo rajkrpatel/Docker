@@ -39,7 +39,8 @@
 38) docker run container-name --restart on-failure
 39) docker run container-name --restart on-failure:3 // 3 is limit number, it will try 3 restart
 40) docker network ls // shows all the network driver
-41) docker-compose up // 
+41) docker-compose up //
+42) docker run -d --name oracle-db --network my-app-network -p 1521:1521 -e ORACLE_PASSWORD=oracle gvenzl/oracle-free:23-slim
 
 
 Container lifecycle stages
