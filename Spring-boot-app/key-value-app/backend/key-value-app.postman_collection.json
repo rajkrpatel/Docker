@@ -1,0 +1,123 @@
+{
+  "info": {
+    "name": "Key-Value App (Spring Boot + Oracle)",
+    "_postman_id": "00000000-0000-0000-0000-000000000001",
+    "description": "Postman collection for Key-Value store APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health - GET /health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Key-Value - POST /store",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"key\": \"myKey\",\n  \"value\": \"myValue\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/store",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "store"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Key-Value - GET /store/:key",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/store/{{key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "store",
+            "{{key}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Key-Value - PUT /store/:key",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"value\": \"updatedValue\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/store/{{key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "store",
+            "{{key}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Key-Value - DELETE /store/:key",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/store/{{key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "store",
+            "{{key}}"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "key",
+      "value": "myKey"
+    }
+  ]
+}
