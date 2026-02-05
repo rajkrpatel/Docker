@@ -46,7 +46,7 @@ public class KeyValueController {
         return repository.findByKey(key)
                 .map(kv -> ResponseEntity.ok(Map.of("key", kv.getKey(), "value", kv.getValue())))
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND)
-                        .body(Map.of("error", "Key not found")));
+                        .body(Map.of("error", "Key not found3!")));
     }
 
     @PutMapping("/{key}")

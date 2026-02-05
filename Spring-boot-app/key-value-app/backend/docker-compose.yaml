@@ -1,0 +1,36 @@
+services:
+ db:
+  image: gvenzl/oracle-xe:21-slim
+  container_name: oracle-db
+  ports:
+   - "1521:1521"
+  environment:
+   ORACLE_PASSWORD: "oracle"
+  volumes:
+    - oracle_data_1:/opt/oracle/oradata
+  networks:
+   - my-app-network1
+  healthcheck:
+   test: ["CMD", "bash", "-c", "echo 'SELECT 1 FROM dual;' | sqlplus -s system/oracle@localhost/XEPDB1"]
+   interval: 10s
+   timeout: 5s
+   retries: 10
+   start_period: 40s
+   
+ backend:
+  build: .
+  container_name: key-value-app
+  networks:
+   - my-app-network1
+  ports:
+  - "8080:8080"  
+  depends_on:
+   db:
+    condition: service_healthy
+
+volumes:
+ oracle_data_1:
+
+networks:
+  my-app-network1:
+    driver: bridge
