@@ -41,6 +41,7 @@
 40) docker network ls // shows all the network driver
 41) docker-compose up //
 42) docker run -d --name oracle-db --network my-app-network -p 1521:1521 -e ORACLE_PASSWORD=oracle gvenzl/oracle-free:23-slim
+43) docker build -t container-name --target = stage-name // --target make that particular start as target iamge
 
 
 Container lifecycle stages
